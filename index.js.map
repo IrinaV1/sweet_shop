@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../src/js/header.js"],"sourcesContent":["export const btn = document.querySelector('.header-burger-btn');\n\nbtn.addEventListener('click', () => {\n  btn.classList.toggle('is-open');\n});\n"],"names":["btn"],"mappings":"ssBAAO,MAAMA,EAAM,SAAS,cAAc,oBAAoB,EAE9DA,EAAI,iBAAiB,QAAS,IAAM,CAClCA,EAAI,UAAU,OAAO,SAAS,CAChC,CAAC"}
