@@ -1,0 +1,43 @@
+.mobile {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 72px);
+
+}
+
+.mobile-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 8px;
+  margin-bottom: 36px;
+  margin-top: 16px;
+}
+
+.mobile-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+
+  padding: 12px 0;
+
+}
+
+.mobile-link-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  background-color: #f19898;
+  border: 1px solid #f19898;
+  border-radius: 100px;
+  padding: 8px 12px;
+  width: 100%;
+}
