@@ -1,1 +1,181 @@
 /* dessert-list */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+
+.section {
+  margin: 64px 0;
+}
+
+.dessert-container {
+  margin-bottom: 40px;
+}
+
+
+
+.dessert-list-title {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #080c0c;
+  margin-bottom: 24px;
+}
+
+.dessert-list-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: #080c0c;
+
+}
+
+/* .dessert-select-wrapper {
+ 
+} */
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .dessert-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 40px;
+    gap: 18px;
+  }
+
+  /* 
+  .dessert-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 432px;
+
+  } */
+
+  .dessert-select-wrapper {
+    width: 256px;
+    flex-shrink: 0;
+  }
+
+  .dessert-list-title {
+    margin-bottom: 8px;
+    text-align: start;
+  }
+
+  .dessert-list-subtitle {
+    text-align: start;
+  }
+}
+
+.dessert-list-select {
+
+  border: 2px solid #202424;
+  border-radius: 6px;
+  padding: 8px 12px;
+  width: 100%;
+}
+
+.dessert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.dessert-list-item {
+  position: relative;
+  border: 1px solid #080c0c;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.dessert-list-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 303px;
+  max-height: 227px;
+  margin-bottom: 16px;
+}
+
+.dessert-list-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dessert-list-category {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #080c0c;
+  margin-bottom: 12px;
+}
+
+.dessert-list-product {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #080c0c;
+  margin-bottom: 4px;
+}
+
+.dessert-list-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #080c0c;
+  margin-bottom: 15px;
+}
+
+.dessert-list-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 16px;
+  right: 16px;
+  border: 2px solid #080c0c;
+  border-radius: 100px;
+  background-color: transparent;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+
+.dessert-list-price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #080c0c;
+}
+
+.dessert-load-btn {
+  border: 1px solid #f19898;
+  border-radius: 100px;
+  width: 100%;
+  padding: 10px 24px;
+  background-color: #f19898;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #080c0c;
+}
+
+
+
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {}
