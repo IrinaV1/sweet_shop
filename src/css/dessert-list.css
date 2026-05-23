@@ -261,7 +261,7 @@
   }
 
   .category-input:not(:checked)+.category-btn:hover,
-  .category-input:focus+.category-btn {
+  .category-input:focus-visible+.category-btn {
     background-color: #f19898;
     color: #080c0c;
   }
