@@ -11,17 +11,18 @@
   border: 0;
 }
 
-
-
 .section {
   margin: 64px 0;
 }
+
 
 .dessert-container {
   margin-bottom: 40px;
 }
 
-
+.dessert-wrapper {
+  margin-bottom: 40px;
+}
 
 .dessert-list-title {
   font-family: "Comfortaa", sans-serif;
@@ -43,44 +44,11 @@
 
 }
 
-/* .dessert-select-wrapper {
- 
-} */
-/* Styles for Tablet devices */
-@media only screen and (min-width: 768px) {
-  .dessert-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    margin-bottom: 40px;
-    gap: 18px;
-  }
-
-  /* 
-  .dessert-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 432px;
-
-  } */
-
-  .dessert-select-wrapper {
-    width: 256px;
-    flex-shrink: 0;
-  }
-
-  .dessert-list-title {
-    margin-bottom: 8px;
-    text-align: start;
-  }
-
-  .dessert-list-subtitle {
-    text-align: start;
-  }
+.dessert-list-wrapper {
+  width: 100%;
 }
 
 .dessert-list-select {
-
   border: 2px solid #202424;
   border-radius: 6px;
   padding: 8px 12px;
@@ -89,7 +57,7 @@
 
 .dessert-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 32px;
   margin-bottom: 40px;
 }
@@ -99,6 +67,7 @@
   border: 1px solid #080c0c;
   border-radius: 16px;
   padding: 16px;
+  width: 100%;
 }
 
 .dessert-list-wrapper {
@@ -163,19 +132,165 @@
 }
 
 .dessert-load-btn {
-  border: 1px solid #f19898;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #f19898;
   border-radius: 100px;
   width: 100%;
-  padding: 10px 24px;
+  padding: 10px 0;
   background-color: #f19898;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: #080c0c;
+  transition: background-color 250ms ease-in-out,
+    border-color 250ms ease-in-out;
 }
 
+.dessert-load-btn:hover,
+.dessert-load-btn:focus {
+  border: 2px solid #080c0c;
+  background-color: transparent;
+}
+
+.dessert-load-btn:active {
+  border: 2px solid #080c0c;
+  background-color: #f5b6b6;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .dessert-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    margin-bottom: 40px;
+    gap: 18px;
+    height: auto;
+  }
 
 
+  .dessert-wrapper {
+
+    width: 432px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .dessert-select-wrapper {
+    width: 256px;
+    flex-shrink: 0;
+  }
+
+  .dessert-list-title {
+    margin-bottom: 8px;
+    text-align: start;
+  }
+
+  .dessert-list-subtitle {
+    text-align: start;
+    width: 90%;
+  }
+
+  .dessert-list {
+    gap: 32px 16px;
+  }
+
+  .dessert-list-item {
+    width: calc((100% - 16px) / 2);
+  }
+
+  .dessert-load-btn {
+    max-width: 344px;
+    margin: 0 auto;
+  }
+}
+
+.categories-list {
+  display: none;
+}
 
 /* Styles for Desktop devices */
-@media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
+  .section {
+    margin: 80px 0;
+  }
+
+  .dessert-select-wrapper {
+    display: none;
+  }
+
+  .categories-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px 32px;
+    margin-bottom: 40px;
+  }
+
+  .category-input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .category-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #080c0c;
+
+    border: 2px solid #080c0c;
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    transition:
+      background-color 250ms ease-in-out,
+      border-color 250ms ease-in-out,
+      color 250ms ease-in-out;
+  }
+
+  .category-input:checked+.category-btn {
+    background-color: #c07979;
+    color: #080c0c;
+  }
+
+  .category-input:not(:checked)+.category-btn:hover,
+  .category-input:focus+.category-btn {
+    background-color: #f19898;
+    color: #080c0c;
+  }
+
+  .dessert-wrapper {
+    width: 768px;
+  }
+
+  .dessert-list-title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+
+  .dessert-list-subtitle {
+    text-align: center;
+    width: 100%;
+  }
+
+  .dessert-list {
+    gap: 40px 24px;
+  }
+
+  .dessert-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .dessert-load-btn {
+    max-width: 198px;
+
+  }
+}
