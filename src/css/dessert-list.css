@@ -68,6 +68,7 @@
   border-radius: 16px;
   padding: 16px;
   width: 100%;
+  cursor: pointer;
 }
 
 .dessert-list-wrapper {
@@ -122,6 +123,16 @@
   width: 44px;
   height: 44px;
   padding: 0;
+  transition: background-color 250ms ease-in-out;
+}
+
+.dessert-list-btn:hover,
+.dessert-list-btn:focus {
+  background-color: #f19898;
+}
+
+.dessert-list-btn:active {
+  background-color: #c07979;
 }
 
 .dessert-list-price {
@@ -145,17 +156,24 @@
   color: #080c0c;
   transition: background-color 250ms ease-in-out,
     border-color 250ms ease-in-out;
+  cursor: pointer;
 }
 
-.dessert-load-btn:hover,
-.dessert-load-btn:focus {
+.dessert-load-btn:not(:disabled):hover,
+.dessert-load-btn:not(:disabled):focus-visible {
   border: 2px solid #080c0c;
   background-color: transparent;
 }
 
-.dessert-load-btn:active {
+.dessert-load-btn:not(:disabled):active {
   border: 2px solid #080c0c;
   background-color: #f5b6b6;
+}
+
+.dessert-load-btn:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.3;
 }
 
 /* Styles for Tablet devices */
@@ -252,7 +270,8 @@
     transition:
       background-color 250ms ease-in-out,
       border-color 250ms ease-in-out,
-      color 250ms ease-in-out;
+      color 250ms ease-in-out,
+      transform 250ms ease-in-out;
   }
 
   .category-input:checked+.category-btn {
@@ -264,6 +283,7 @@
   .category-input:focus-visible+.category-btn {
     background-color: #f19898;
     color: #080c0c;
+    transform: scale(1.08);
   }
 
   .dessert-wrapper {
@@ -287,10 +307,20 @@
 
   .dessert-list-item {
     width: calc((100% - 72px) / 4);
+    transition: transform 250ms ease-in-out;
+  }
+
+  .dessert-list-item:hover {
+    transform:
+      translateY(-3px) scale(1.02);
   }
 
   .dessert-load-btn {
     max-width: 198px;
+    transition: transform 250ms ease-in-out;
+  }
 
+  .dessert-load-btn:hover {
+    transform: scale(1.04);
   }
 }
