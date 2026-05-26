@@ -6,6 +6,7 @@ import {
   getDesserts,
   getDessertsById,
 } from './services/api/api';
+import { openModal } from './dessert-modal';
 
 const selectContainer = document.querySelector('.dessert-list-select');
 const categoriesContainer = document.querySelector('.dessert-categories-list');
@@ -171,7 +172,7 @@ function openDessertModal(event) {
   const card = btn.closest('.dessert-list-item');
   const id = card.dataset.id;
 
-  // openModal(id);
+  openModal(id);
 }
 
 //RENDER
@@ -217,7 +218,7 @@ function renderDesserts(arr) {
         <span class="dessert-list-price">${price} грн</span>
         <button class="dessert-list-btn" type="button" aria-label="dessert list">
           <svg class="dessert-list-icon" width="24" height="24">
-            <use href="/img/icons/sprite.svg#arrow_outward"></use>
+            <use href="./img/icons/sprite.svg#arrow_outward"></use>
           </svg>
         </button>
       </li>`
