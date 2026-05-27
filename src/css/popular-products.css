@@ -1,0 +1,59 @@
+.popular-product-title {
+  margin-bottom: 32px;
+}
+
+.popular-swiper {
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.popular-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.popular-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.popular-prev,
+.popular-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+}
+
+.swiper-button-disabled,
+.popular-prev.swiper-button-disabled,
+.popular-next.swiper-button-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.swiper-pagination-bullets-dynamic {
+  overflow: hidden;
+}
+
+.popular-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+}
+
+.swiper-pagination {
+  position: static !important;
+
+  width: auto !important;
+  max-width: 140px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
