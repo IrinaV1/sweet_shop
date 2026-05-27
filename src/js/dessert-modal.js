@@ -41,7 +41,8 @@ function renderDesserts({
   rate,
 }) {
   const markup = `
-   <div class="dessert-modal-wrapper" data-id="${_id}">
+  <div class="dessert-modal-card" data-id="${_id}">
+   <div class="dessert-modal-wrapper">
         <img class="dessert-modal-img" src="${image}" alt="${name}">
       </div>
       <h2 class="dessert-modal-product">${name}</h2>
@@ -52,7 +53,8 @@ function renderDesserts({
       <p class="dessert-modal-compound"><span>Склад </span>: ${composition}</p>
       <button class="dessert-modal-btn" type="button">
         Перейти до замовлення
-      </button>`;
+      </button>
+      </div>`;
 
   dessertContainer.innerHTML = markup;
 }
