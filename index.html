@@ -21,7 +21,7 @@
   <script type="module" crossorigin src="/sweet_shop/index.js"></script>
   <link rel="modulepreload" crossorigin href="/sweet_shop/assets/vendor-ByIlZ9fe.js">
   <link rel="stylesheet" crossorigin href="/sweet_shop/assets/vendor-LBU0X961.css">
-  <link rel="stylesheet" crossorigin href="/sweet_shop/assets/index-I49pBeVJ.css">
+  <link rel="stylesheet" crossorigin href="/sweet_shop/assets/index-DagFYEK9.css">
 </head>
 
 <body>
@@ -65,9 +65,34 @@
   <div class="container">
     <div class="container-popular-product">
       <h2 class="popular-product-title title">Наші бестселлери</h2>
-      <ul class="popular-product-list">
 
-      </ul>
+      <div class="popular-swiper swiper">
+        <ul class="popular-product-list swiper-wrapper"></ul>
+      </div>
+
+      <div class="popular-controls">
+        <div class="swiper-pagination">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+        </div>
+
+        <div class="popular-buttons">
+          <button class="popular-prev" type="button" aria-label="Previous slide">
+            Prev
+          </button>
+
+          <button class="popular-next" type="button" aria-label="Next slide">
+            Next
+          </button>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>
